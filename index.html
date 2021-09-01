@@ -24,17 +24,171 @@
       font-family: 'Raleway', sans-serif;
       background: url('/images/bg-mobile.png') no-repeat;
       background-size: cover;
+      display: grid;
+      place-content: center;
+    }
+
+    main{
+      width: 350px;
+    }
+
+    .first{
+      border-radius: 10px 100px 10px 10px;
+      padding: 40px;
+      background: hsl(228, 56%, 26%);
+      margin-bottom: 20px;
+    }
+
+    .heading img{
+      width: 160px;
+      margin-bottom: 30px;
+    }
+
+    .icons{
+      display: flex;
+      align-items: center;
+    }
+
+    .doc,
+    .folder,
+    .upload{
+      background: hsl(229, 57%, 11%);
+      height: 60px;
+      width: 60px;
+      display: grid;
+      place-content: center;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .doc img,
+    .folder img,
+    .upload img{
+      transform: scale(1.2);
+    }
+
+    .second{
+      position: relative;
+      padding: 35px;
+      background: hsl(228, 56%, 26%);
+      border-radius: 10px;
+    }
+
+    .a1{
+      width: 100%;
+      text-align: center;
+      color: hsl(243, 100%, 93%);
+      font-size: 1rem;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .a1 span{
+      font-weight: 700;
+    }
+
+    .mem-range{
+      color: hsl(243, 100%, 93%);
+    }
+
+    .bar{
+      width: 100%;
+      height: 25px;
+      border-radius: 20px;
+      background: hsl(229, 57%, 17%);
+      margin-bottom: 10px;
+      padding: 4px;
+    }
+
+    .percent{
+      width: 70%;
+      height: 100%;
+      border-radius: 20px;
+      background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+      display: flex;
+      justify-content: flex-end;
+      padding: 2px;
+    }
+
+    .indicator{
+      width: 13px;
+      border-radius: 50%;
+      height: 100%;
+      background: hsl(243, 100%, 93%);
+    }
+
+    .mem-range{
+      font-size: .9rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .mem-left{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      width: 200px;
+      border-radius: 10px;
+      padding: 10px 20px;
+      position: absolute;
+      left: 75px;
+    }
+
+    .b1{
+      color: hsl(229, 57%, 11%);
+      font-size: 3rem;
+      margin-right: 10px;
+    }
+
+    .b2{
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: hsl(229, 7%, 55%);
     }
   </style>
 </head>
 <body>
+  <main>
+    <section class="first">
+      <div class="heading">
+        <img src="/images/logo.svg" alt="">
+      </div>
+      <div class="icons">
+        <div class="doc">
+          <img src="/images/icon-document.svg" alt="">
+        </div>
+        <div class="folder">
+          <img src="/images/icon-folder.svg" alt="">
+        </div>
+        <div class="upload">
+          <img src="/images/icon-upload.svg" alt="">
+        </div>
+      </div>
+    </section>
 
-  You’ve used 815 GB of your storage
+    <section class="second">
+      <h2 class="a1">You’ve used <span>815 GB</span> of your storage</h2>
+      <div class="bar">
+        <div class="percent">
+          <div class="indicator">
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
+          </div>
+        </div>
+      </div>
+
+      <div class="mem-range">
+        <p class="min">0 GB</p>
+        <p class="max">1000 GB</p>
+      </div>
+
+      <div class="mem-left">
+        <h1 class="b1">185</h1>
+        <h2 class="b2">GB Left</h2>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
