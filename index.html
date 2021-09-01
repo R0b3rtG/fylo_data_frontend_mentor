@@ -30,6 +30,8 @@
 
     main{
       width: 350px;
+      display: flex;
+      flex-direction: column;
     }
 
     .first{
@@ -148,6 +150,82 @@
       font-size: 1rem;
       color: hsl(229, 7%, 55%);
     }
+
+    @media (max-width: 370px){
+      main{
+        width: 270px;
+      }
+
+      .heading img{
+        width: 120px;
+      }
+
+      .doc,
+      .folder,
+      .upload{
+        width: 45px;
+        height: 45px;
+      }
+
+      .mem-left{
+        left: 37px;
+      }
+    }
+
+    @media (min-width: 1000px){
+      body{
+        background: url('/images/bg-desktop.png') no-repeat bottom / contain;
+        background-color: hsl(229, 57%, 11%);
+      }
+      
+      main{
+        flex-direction: row;
+        align-items: flex-end;
+        width: 950px;
+      }
+
+      .first{
+        margin: 0;
+        margin-right: 25px;
+      }
+
+      .second{
+        width: 100%;
+        height: 160px;
+      }
+
+      .mem-range{
+        margin-bottom: 0;
+      }
+
+      .mem-left{
+        top: -50px;
+        left: 370px;
+      }
+
+      .a1{
+        text-align: left;
+      }
+
+      .arrow-left {
+        width: 0; 
+        height: 0; 
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent; 
+        border-right:30px solid #fff; 
+        position: inherit;
+        bottom: -20px;
+        right: 0;
+      }
+
+    }
+
+    @media(min-width: 1000px) and (min-height: 1300px){
+      body{
+        background: url('/images/bg-mobile.png') no-repeat;
+        background-size: cover;
+      }
+    }
   </style>
 </head>
 <body>
@@ -187,6 +265,7 @@
       <div class="mem-left">
         <h1 class="b1">185</h1>
         <h2 class="b2">GB Left</h2>
+        <div class="arrow-left"></div>
       </div>
     </section>
   </main>
